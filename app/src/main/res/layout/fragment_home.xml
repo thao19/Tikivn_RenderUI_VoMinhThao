@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/pulltorefresh">
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/holo_blue_light"
+        android:id="@+id/bg">
+    </ImageView>
+
+
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/cicular_border_search"
+        app:queryHint="@string/search_hint"
+        app:iconifiedByDefault="false"
+        android:id="@+id/searchbar">
+    </androidx.appcompat.widget.SearchView>
+
+
+
+    <fragment
+        android:id="@+id/fragment_banner"
+        android:name="com.example.tikitest.ui.home.banner.fragmentBanner_child_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+               android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/searchbar"
+        android:layout_marginTop="10dp"
+        />
+
+    <fragment
+        android:id="@+id/fragment_quicklink"
+        android:name="com.example.tikitest.ui.home.quicklink.fragment_quicklink_child_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fragment_banner" />
+
+    <fragment
+        android:id="@+id/fragment_flashdeal"
+        android:name="com.example.tikitest.ui.home.flashdeal.fragment_flashdeal_child_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/fragment_quicklink"
+        android:layout_marginTop="10dp"/>
+
+
+</RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

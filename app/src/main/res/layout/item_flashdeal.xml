@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="10dp">
+
+
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/imgProduct"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8.90000 đ"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/priceFlashDeal"
+        android:layout_below="@id/imgProduct">
+    </TextView>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/priceFlashDeal">
+            <ProgressBar
+                android:layout_width="128dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:max="100"
+                android:progress="30"
+               android:background="@drawable/bordercircle"
+                android:progressDrawable="@drawable/bordercircle"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:id="@+id/progress_FlashDeal"
+               />
+            <TextView
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProgressOrder"
+                android:text="Đã bán"
+                android:textSize="10dp"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:id="@+id/img_progress_order"
+                android:layout_marginLeft="5dp"
+                android:layout_alignLeft="@id/txtProgressOrder">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="90%"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_alignEnd="@id/imgProduct"
+        android:background="@android:drawable/ic_notification_overlay"
+        android:id="@+id/pricePercent"></TextView>
+
+</RelativeLayout>

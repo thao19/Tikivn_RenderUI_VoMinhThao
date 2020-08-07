@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.home.flashdeal.fragment_flashdeal_child_home">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá sốc hôm nay"
+        android:id="@+id/Titleflashdeal"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_orange_light">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtnMore"
+        android:text="XEM THÊM"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/holo_blue_light"></TextView>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/BtnMore"
+        android:layout_marginTop="5dp"
+        android:id="@+id/recyclerview_flashdeal">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_cir_flasldeal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"></ProgressBar>
+
+</RelativeLayout>
